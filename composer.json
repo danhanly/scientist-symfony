@@ -1,7 +1,7 @@
 {
     "name": "danhanly/scientist-symfony",
     "description": "Integrates Scientist into Symfony",
-    "keywords": ["scientist", "experiment", "trial"],
+    "keywords": ["scientist", "experiment", "trial", "symfony", "php"],
     "authors": [
         {
             "name": "Dan Hanly",
