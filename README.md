@@ -13,4 +13,39 @@ Require the latest version of Scientist Symfony using [Composer](https://getcomp
 
     composer require danhanly/scientist-symfony
 
+Register the bundle in your AppKernel.
+
+```php
+class AppKernel extends Kernel
+{
+    public function registerBundles()
+    {
+        $bundles = [
+            ...
+            new DanHanly\ScientistBundle\ScientistBundle()
+        ];
+        ...
+    }
+}
+```
+
 ## Usage
+
+You can access Scientist from any Container Aware Class.
+
+```php
+$scientist = $this->container->get('scientist');
+```
+
+From this point, you can use the library as normal within your processes.
+
+```php
+
+$scientist->experiment('my experiment')
+    ->control($controlCallback)
+    ->trial('trial name', $trialCallback);
+
+$value = $experiment->run();
+
+```
+
